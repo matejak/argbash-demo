@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# ARG_POSITIONAL_INF([directory],[directories to list],[0],[.])
+# ARG_OPTIONAL_SINGLE([width],[w],[Width of the output])
+# ARG_OPTIONAL_BOOLEAN([almost-all],[A],[Omit implicit '.' and '..' directories in the listing])
+# ARG_HELP([Script that tells what 'ls' would do.])
+# ARG_OPTION_STACKING([none])
+# ARGBASH_SET_DELIM([ ])
+# ARGBASH_GO()
+
+# [
+
+printf "Will list directories: "
+printf "'%s', " "${_arg_directory[@]}"
+printf "\n"
+
+if test -n "$_arg_width"
+then
+	printf "Padding the output to '%d' terminal columns.\n" "$_arg_width"
+fi
+
+test "$_arg_almost_all" = on && echo "Oitting implicit '.' and '..' directories in the listing."
+
+# ]
