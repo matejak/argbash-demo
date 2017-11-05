@@ -1,0 +1,8 @@
+set -e
+
+version=2.5.0
+file="$version.tar.gz"
+
+wget "https://github.com/matejak/argbash/archive/$file"
+tar -xf "$file"
+echo "Enjoy your argbash executable at argbash-$version/bin/argbash"
