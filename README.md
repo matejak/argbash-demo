@@ -23,7 +23,6 @@ To get argbash, you can:
 
 * `draw-hline`: A script that draws horizontal lines.
 * `underline`: A script that underlines a supplied phrase. Calls `draw-line`.
-
 * `argbash/draw-hline.m4`: Template for the argbash-powered line drawer.
 * `argbash/underline.m4`: Argbash-powered underline, wraps argbash-powered line drawer.
 
