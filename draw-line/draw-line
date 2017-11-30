@@ -1,0 +1,19 @@
+#!/bin/bash
+
+line_len=80
+line_char=x
+interleaved=yes
+
+if test "$interleaved" = yes; then
+	print_iter=$(( line_len / 2 ))
+	print_char="$line_char "
+else
+	print_iter="$line_len"
+	print_char="$line_char"
+fi
+
+for _ in $(seq 1 $print_iter); do
+	printf "%s" "$print_char"
+done
+
+echo
