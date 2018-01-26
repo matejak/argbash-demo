@@ -8,10 +8,6 @@ underline_len="$(printf "%s" "$to_underline" | wc -m)"
 # print
 echo "$to_underline"
 # underline
-cat draw-line \
-	| sed -e "s/\(line_len=\).*/\1$underline_len/" \
-	| sed -e "s/\(line_char=\).*/\1$line_char/" \
-	| sed -e "s/\(interleaved=\).*/\1no/" \
-	| bash -s
+line_len="$underline_len" line_char="$line_char" interleaved=no bash draw-line bash draw_line
 # make newline
 echo

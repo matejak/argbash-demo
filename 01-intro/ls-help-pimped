@@ -3,6 +3,7 @@
 # ARG_POSITIONAL_INF([directory],[directories to list],[0],[.])
 # ARG_OPTIONAL_SINGLE([width],[w],[Width of the output])
 # ARG_OPTIONAL_BOOLEAN([almost-all],[A],[Omit implicit '.' and '..' directories in the listing])
+# ARG_POSITIONAL_DOUBLEDASH()
 # ARG_HELP([Script that tells what 'ls' would do.])
 # ARG_TYPE_GROUP([nnint], [WIDTH], [width])
 # ARG_RESTRICT_VALUES([no-local-options])

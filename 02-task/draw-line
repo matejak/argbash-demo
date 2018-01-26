@@ -1,8 +1,8 @@
 #!/bin/bash
 
-line_len=80
-line_char=x
-interleaved=yes
+line_len=${line_len:-80}
+line_char=${line_char:-x}
+interleaved=${interleaved:-yes}
 
 if test "$interleaved" = yes; then
 	print_iter=$(( line_len / 2 ))
