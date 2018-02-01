@@ -6,6 +6,8 @@ To get argbash, you can:
 
 * Use the `get-argbash` script, which will download and unpack a release.
   Then, call the `argbash` executable script by specifying `argbash-<version goes here>/bin/argbash`
+  
+To fully enjoy the experience, you will need `Argbash>=2.6.0a`, so the two methods below may not be suitable for following the examples here.
 
 * Use `argbash-docker` as the argbash executable script. It will download images ~ 30 MB when called for the first time.
 
