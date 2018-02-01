@@ -13,18 +13,18 @@ To get argbash, you can:
 
 ## Examples
 
-### templates - proof of concept
+### 01-intro
 
-* `ls-help`: The version that has parsing code with minimal footprint.
-* `ls-help-standard`: What you get by default - getopts-like option stacking is enabled and you can use both whitespace and `=` as option-value delimiter.
-* `ls-help-pimped`: You get some type checking as well as guard against passing options instead of values - althoug passing `-w -A` as argument will fail due to the type check, it would fail even without the type check as `-A` is a valid option and it appears where argument value should be.
+See some very simple templates that illustrate the wide range of Argbash capabilities.
 
-### draw-line - advanced features
+### 02-task
 
-* `draw-hline`: A script that draws horizontal lines.
-* `underline`: A script that underlines a supplied phrase. Calls `draw-line`.
-* `argbash/draw-hline.m4`: Template for the argbash-powered line drawer.
-* `argbash/underline.m4`: Argbash-powered underline, wraps argbash-powered line drawer.
+There are two scripts --- the first one draws a line in the terminal, and the second one, underlines a user-supplied phrase (by calling the first one).
+Let's try to convert those two scripts to Argbash argument processing, so they gain a robust command-line interface!
+
+### 03-finish
+
+As you have the scripts from the previous example, figute out how to wrap a subset of the `draw_line` interface, so it becomes part of the by the `underline` interface.
 
 ## Useful links
 

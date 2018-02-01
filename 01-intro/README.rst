@@ -4,17 +4,17 @@ Introduction
 This directory contains templates.
 Those are consumable by Argbash, which produces a script out of them.
 
-The scripts here mimic the well-known `ls` command.
-When executed, they say what `ls` would do if you executed it in the same way.
-e.g. as `ls` lists files in the current directory, `ls-help` outputs `Will list directories: '.',`
-Long and short versions of options `-A` and `-w <width>` are supported.
+The scripts here mimic the well-known ``ls`` command.
+When executed, they say what ``ls`` would do if you executed it in the same way.
+e.g. as ``ls`` lists files in the current directory, ``ls-help`` outputs ``Will list directories: '.',``
+Long and short versions of options ``-A`` and ``-w <width>`` are supported.
 
 Contents
 --------
 
-* `ls-help`: Template with minimal parsing functionality. The generated parsing code will be terse.
-* `ls-help-standard`: Template of a script with default settings. Good compromise between features and parsing code complexity.
-* `ls-help-pimped`: Template of a script with luxurious parsing functionality.
+* ``ls-help``: Template with minimal parsing functionality. The generated parsing code will be terse.
+* ``ls-help-standard``: Template of a script with default settings. Good compromise between features and parsing code complexity.
+* ``ls-help-pimped``: Template of a script with luxurious parsing functionality.
 
 Capabilities
 ------------
