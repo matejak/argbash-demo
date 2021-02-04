@@ -52,7 +52,7 @@ Port script to Argbash
 Our old `draw-line` is written in Argbash-friendly way - there is a very clear bridge between the script's interface and functionality.
 When we want to interconnect Argbash with the script, it's enough to just focus on its leading lines that contain variable definitions.
 
-Copy contents of that script, and paste it into our `new-draw-line`, and modify variable assignments accordingly.
+Copy contents of that script, and paste to the indicated place close to the bottom of `new-draw-line`, and modify variable assignments accordingly.
 For example, `line_len="$_arg_length"` et cetera - figure that out!
 
 You should be able to call `./new-draw-line --length 40 -` to draw 40 character-wide line of dashes.

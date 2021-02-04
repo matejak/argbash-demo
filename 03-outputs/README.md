@@ -22,8 +22,11 @@ POSIX scripts have limitations though:
 Let's examine our `ls-help` scipt in this directory - all optional arguments have short options, so we can see how a well-behaved POSIX script would look like:
 
 ```
-argbash -i -t posix-script ls-help
-./posix-script -h
+argbash -t bash-script -o ls-help ls-help-tpl
+wc -l ls-help
+argbash -t posix-script -i ls-help
+wc -l ls-help
+./ls-help -h
 ```
 
 
@@ -73,11 +76,16 @@ It is quite difficult to make a completion tailor-made for your script, but one 
 Let's check it out. Generate a Bash completion snippet for `ls-help`, and source it:
 
 ```
-argbash -t completion --strip all -o _ls-help ls-help
-. _ls-help
+argbash -t completion --strip all -i ls-help
+. ls-help
 ```
 
 and type `./ls-help -<TAB>` and see what happens.
+
+This feels a bit weird, as you basically source a completion file, and then you try to execute it.
+However, this is just a result of effort to get things up and running quickly - in practice, your completion file will sit in some remote directory, and your Bash shell will try to complete arguments based on the name of the command.
+
+Bash doesn't pay any attention to the contents of what will actually be executed, it just maps completion functions to commands.
 
 
 Conclusion

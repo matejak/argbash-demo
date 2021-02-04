@@ -14,10 +14,10 @@ Then the Argbash Commented Mode is exactly for you!
 Generate the `ls-help` script, passing the `-c` argument to Argbash:
 
 ```
-argbash -i -c ls-help
+argbash -c -o ls-help-new ls-help
 ```
 
-Now, when you open `ls-help`, you can see that the generated code contains helpful comments.
+Now, when you open `ls-help-new`, you can see that the generated code contains helpful comments.
 
 
 Var args
@@ -34,9 +34,10 @@ Terminator
 What does the `ARG_POSITIONAL_DOUBLEDASH` do?
 The POSIX convention defines the Terminator - two dashes terminate parts of the command-line where optional arguments are expected from the part where there are only positional arguments.
 This is useful in cases when you can come in touch with positional arguments that can look like directories.
+
 For example, if you have an empty directory and you create a file `-rf` and a directory `z`, then if you execute `rm *`, you would expect that `-rf` is deleted, and `z` is preserved, as it is a directory. In reality, `-rm` stays there, while `z` and its contents are wiped out.
 
-The macro implements support for the double dash, so you can try how the output of `ls-help -- -w 80 x` differs from `ls-help -- -w 80 x` when the macro is present, and how it is when you take it away and you regenerate the script.
+The macro implements support for the double dash, so you can try how the output of `ls-help-new -- -w 80 x` differs from `ls-help-new -- -w 80 x` when the macro is present, and how it is when you take it away and you regenerate the script.
 
 Typing
 ------

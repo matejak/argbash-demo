@@ -2,9 +2,9 @@
 
 line_len=80
 line_char=x
-interleaved=yes
+interleaved=off
 
-if test "$interleaved" = yes; then
+if test "$interleaved" = on; then
 	print_iter=$(( line_len / 2 ))
 	print_char="$line_char "
 else
