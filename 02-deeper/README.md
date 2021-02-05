@@ -37,7 +37,7 @@ This is useful in cases when you can come in touch with positional arguments tha
 
 For example, if you have an empty directory and you create a file `-rf` and a directory `z`, then if you execute `rm *`, you would expect that `-rf` is deleted, and `z` is preserved, as it is a directory. In reality, `-rm` stays there, while `z` and its contents are wiped out.
 
-The macro implements support for the double dash, so you can try how the output of `ls-help-new -- -w 80 x` differs from `ls-help-new -- -w 80 x` when the macro is present, and how it is when you take it away and you regenerate the script.
+The macro implements support for the double dash, so you can try how the output of `ls-help-new -w 80 x` differs from `ls-help-new -- -w 80 x` when the macro is present, and how it is when you take it away and you regenerate the script.
 
 Typing
 ------
